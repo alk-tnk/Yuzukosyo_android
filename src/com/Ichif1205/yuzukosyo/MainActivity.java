@@ -1,5 +1,7 @@
 package com.Ichif1205.yuzukosyo;
 
+import com.Ichif1205.yuzukosyo.connection.DummyConnection;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -10,6 +12,11 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		// HTTP接続時の例 =================
+		final DummyConnection dummy = new DummyConnection();
+		dummy.exec();
+		// =================
 	}
 
 	@Override
